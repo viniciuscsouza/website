@@ -15,8 +15,8 @@
             {% for produto in produtos %}
             <tr>
                 <td>{{ produto.nome }}</td>
-                <td><a href="{%url 'website:editar_produtos' linha.id %}" class="btn btn-info btn-sm">Editar</a></td>
-                <td><a href="{%url 'website:deletar_produtos' linha.id %}" class="btn btn-danger btn-sm">Excluir</a></td>
+                <td><a href="{%url 'website:editar_produtos' produto.id %}" class="btn btn-info btn-sm">Editar</a></td>
+                <td><a href="{%url 'website:deletar_produtos' produto.id %}" class="btn btn-danger btn-sm">Excluir</a></td>
 
             </tr>
             {% endfor %}
