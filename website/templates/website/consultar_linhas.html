@@ -1,0 +1,27 @@
+{% extends "website/base.html" %}
+{% block conteudo %}
+{% load widget_tweaks %}
+
+<div class="container">
+    <h1>Listar linhas</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th colspan="2" style="text-align:center">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for linha in linhas %}
+            <tr>
+                <td>{{ linha.nome }}</td>
+                <td><a href="{%url 'website:editar_linhas' linha.id %}" class="btn btn-info btn-sm">Editar</a></td>
+                <td><a href="{%url 'website:deletar_linhas' linha.id %}" class="btn btn-danger btn-sm">Excluir</a></td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a class="btn btn-primary" href="{% url 'website:cadastrar_linhas'%}" role="button">Cadastrar nova linha</a>
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "website/base.html" %}
+
+{% block conteudo %}
+<br />
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Cadastro Linhas</h5>
+                    <p class="card-text">Veja aqui a lista de 
+                    <code>Linhas</code> cadastradas.
+                    </p>
+                    <a href="{% url 'website:cadastrar_linhas' %}" class="btn btn-warning">Cadastrar</a>
+                    <a href="{% url 'website:consultar_linhas' %}" class="btn btn-primary">Consultar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Cadastro Categorias</h5>
+                    <p class="card-text">Veja aqui a lista de 
+                    <code>Categorias</code> cadastradas.
+                    </p>
+                    <a href="{% url 'website:cadastrar_categorias' %}" class="btn btn-warning">Cadastrar</a>
+                    <a href="{% url 'website:consultar_categorias' %}" class="btn btn-primary">Consultar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Cadastro Produtos</h5>
+                    <p class="card-text">Veja aqui a lista de 
+                    <code>Produtos</code> cadastrados.
+                    </p>
+                    <a href="{% url 'website:cadastrar_produtos' %}" class="btn btn-warning">Cadastrar</a>
+                    <a href="{% url 'website:consultar_produtos' %}" class="btn btn-primary">Consultar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

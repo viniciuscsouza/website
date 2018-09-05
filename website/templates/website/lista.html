@@ -1,0 +1,19 @@
+{% extends "website/base.html" %}
+{% load widget_tweaks %}
+
+{% block conteudo %}
+
+
+<div class="container">
+<table>
+    <tbody>
+    <h1>Tabela</h1>
+    {% for obj in objetos %}
+        <tr>
+            <td>{{ obj.nome }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}

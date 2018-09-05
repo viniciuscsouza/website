@@ -1,0 +1,27 @@
+{% extends "website/base.html" %}
+{% block conteudo %}
+{% load widget_tweaks %}
+
+<div class="container">
+    <h1>Listar categorias</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th colspan="2" style="text-align:center">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for categoria in categorias %}
+            <tr>
+                <td>{{ categoria.nome }}</td>
+                <td><a href="{%url 'website:editar_categorias' categoria.id %}" class="btn btn-info btn-sm">Editar</a></td>
+                <td><a href="{%url 'website:deletar_categorias' categoria.id %}" class="btn btn-danger btn-sm">Excluir</a></td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a class="btn btn-primary" href="{% url 'website:cadastrar_categorias'%}" role="button">Cadastrar nova categoria</a>
+</div>
+{% endblock %}
